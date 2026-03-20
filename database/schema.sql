@@ -1,11 +1,11 @@
 -- Workflow Automation System Schema
 
--- Cleanup existing tables
-DROP TABLE IF EXISTS execution_logs CASCADE;
-DROP TABLE IF EXISTS executions CASCADE;
-DROP TABLE IF EXISTS rules CASCADE;
-DROP TABLE IF EXISTS steps CASCADE;
-DROP TABLE IF EXISTS workflows CASCADE;
+-- Cleanup existing tables (Commented out to prevent data loss on Render restarts)
+-- DROP TABLE IF EXISTS execution_logs CASCADE;
+-- DROP TABLE IF EXISTS executions CASCADE;
+-- DROP TABLE IF EXISTS rules CASCADE;
+-- DROP TABLE IF EXISTS steps CASCADE;
+-- DROP TABLE IF EXISTS workflows CASCADE;
 
 -- Workflows table
 CREATE TABLE IF NOT EXISTS workflows (

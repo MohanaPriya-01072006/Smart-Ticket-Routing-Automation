@@ -5,7 +5,7 @@ const errorHandler = (err, req, res, next) => {
   err.status = err.status || 'error';
 
   // Default to verbose errors unless explicitly running in production.
-  if (process.env.NODE_ENV !== 'production') {
+  if (process.env.NODE_ENV !== 'production' || process.env.DEBUG_MODE === 'true') {
     res.status(err.statusCode).json({
       status: err.status,
       error: err,
