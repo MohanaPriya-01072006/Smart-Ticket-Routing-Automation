@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node apply_schema.js && node server.js",
     "test": "vitest run"
   },
   "dependencies": {
