@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 
-const API_BASE_URL = 'https://smart-ticket-routing-automation.onrender.com/api';
+import API_BASE_URL from '../api';
+
+const API = API_BASE_URL;
 
 /**
  * ExecutionPanel Component

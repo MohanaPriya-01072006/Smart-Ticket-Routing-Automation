@@ -5,12 +5,13 @@ const StepSettings = ({ step, onSave, onClose }) => {
   const [name, setName] = useState(step.name || '');
   const [metadata, setMetadata] = useState(step.metadata || {});
   const [loading, setLoading] = useState(false);
+  const API = API_BASE_URL;
 
   const handleSave = async () => {
     setLoading(true);
     try {
       // Backend reliably supports PUT (PATCH may not be routed depending on server/router version)
-      const res = await axios.put(`http://localhost:5000/api/steps/${step.id}`, { name, metadata });
+      const res = await axios.put(`${API}/steps/${step.id}`, { name, metadata });
       onSave(res.data);
       onClose();
     } catch (err) {

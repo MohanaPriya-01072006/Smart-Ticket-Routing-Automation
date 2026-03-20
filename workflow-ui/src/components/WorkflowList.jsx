@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const API = 'http://localhost:5000/api';
+import API_BASE_URL from '../api';
+
+const API = API_BASE_URL;
 
 const WorkflowList = ({ onSelect, onNew, onExecute }) => {
   const [workflows, setWorkflows] = useState([]);

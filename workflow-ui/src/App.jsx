@@ -9,7 +9,9 @@ import ExecutionPanel from './components/ExecutionPanel';
 import HistoryView from './components/HistoryView';
 import ApprovalGate from './components/ApprovalGate';
 
-const API = 'https://smart-ticket-routing-automation.onrender.com/api';
+import API_BASE_URL from './api';
+
+const API = API_BASE_URL;
 
 export default function App() {
   const [currentView, setCurrentView] = useState('list'); // list, editor, history

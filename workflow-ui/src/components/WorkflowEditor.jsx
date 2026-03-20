@@ -17,7 +17,9 @@ import StepSettings from './StepSettings';
 import ErrorBoundary from './ErrorBoundary';
 import { motion } from 'framer-motion';
 
-const API_BASE_URL = 'http://localhost:5000/api';
+import API_BASE_URL from '../api';
+
+const API = API_BASE_URL;
 
 const nodeTypes = {
   workflowNode: WorkflowNode,
